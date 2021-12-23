@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Aula 10</title>   
+    <style>
+        input#cal{
+            background-color: blueviolet;
+            width: 11%;
+
+        }
+        input#txn5{
+            display: block;
+            margin-bottom: 1%;
+        }
+    </style>
+</head>
+<body>
+    <header>    
+        <img src="">
+
+    </header>
+
+    <main>
+        <p>Matematica</p>
+        <input type="text" name="nota1" id="txn1">
+        <p>Portugues</p>
+        <input type="text" name="nota2" id="txn2">
+        <p>Portugues</p>
+        <input type="text" name="nota3" id="txn3">
+        <p>Portugues</p>
+        <input type="text" name="nota4" id="txn4">
+        <p>Portugues</p>
+        <input type="text" name="nota5" id="txn5">
+
+        <input type="button" value="Calcular" name="calcula" id="cal">
+        
+        <p id="result"></p>
+    </main>
+
+    <script>
+        var r = window.document.querySelector('p#result');
+        var Cal = window.document.querySelector('input#cal');
+        Cal.addEventListener('click', cal);
+
+        function cal(){
+        var N1 =  window.document.querySelector('input#txn1');
+        var N2 =  window.document.querySelector('input#txn2');
+        var N3 =  window.document.querySelector('input#txn3');
+        var N4 =  window.document.querySelector('input#txn4');
+        var N5 =  window.document.querySelector('input#txn5');
+        var n1 =  Number.parseInt(N1.value);
+        var n2 =  Number.parseInt(N2.value);
+        var n3 =  Number.parseInt(N3.value);
+        var n4 =  Number.parseInt(N4.value);
+        var n5 =  Number.parseInt(N5.value);
+        var media = (n1 + n2 + n3 + n4 + n5) / 5 ;
+
+        result.innerHTML = `O resultado da média das notas são ${media}`
+        }        
+    </script>
+</body>
+</html>
